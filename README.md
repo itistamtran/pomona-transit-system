@@ -26,35 +26,38 @@ It uses **JavaFX** for the user interface, **MySQL** as the backend database, an
 
 ## Project Structure
 
-````txt
+## Project Structure
+
+```text
 pomona-transit-system/
 │
-├── bin/ # Compiled Java class files (not committed)
-├── lib/ # External libraries (e.g., MySQL Connector JAR)
+├── bin/                       # Compiled Java class files (not committed)
+├── lib/                       # External libraries (MySQL Connector JAR)
 │
 ├── src/
-│ ├── database/ # Database connection and helper classes
-│ └── screens/ # All JavaFX UI screens
-│ ├── AddActualTripStopInfo.java
-│ ├── AddBus.java
-│ ├── AddDriver.java
-│ ├── DeleteBus.java
-│ ├── DisplayStops.java
-│ ├── DisplayTripSchedule.java
-│ ├── EditTripSchedule.java
-│ ├── HomePage.java
-│ └── WeeklyScheduleOfDriver.java
+│   ├── database/              # Database connection and helper classes
+│   │   ├── Database.java
+│   └── screens/               # All JavaFX UI screens
+│       ├── AddActualTripStopInfo.java
+│       ├── AddBus.java
+│       ├── AddDriver.java
+│       ├── DeleteBus.java
+│       ├── DisplayStops.java
+│       ├── DisplayTripSchedule.java
+│       ├── EditTripSchedule.java
+│       ├── HomePage.java
+│       └── WeeklyScheduleOfDriver.java
 │
-├── Main.java # JavaFX application entry point
-├── styles.css # Global stylesheet for JavaFX UI
+├── Main.java                  # JavaFX application entry point
+├── styles.css                 # Global stylesheet for JavaFX UI
 │
-├── pomonatransit_setup.sql # SQL script to create & populate the database
+├── pomonatransit_setup.sql    # SQL script to create & populate the database
 │
-├── config.properties # Database configuration (JDBC URL, user, pass)
-├── .gitignore # Files and folders excluded from Git
-├── .classpath # VS Code / Eclipse classpath config
-└── .project # VS Code / Eclipse project config
-
+├── config.properties          # Database configuration (JDBC URL, user, pass)
+├── .gitignore                 # Git ignore rules
+├── .classpath                 # VS Code / Eclipse classpath config
+└── .project                   # VS Code / Eclipse project config
+```
 
 ## Database Setup
 
@@ -64,7 +67,7 @@ This project uses MySQL to store transit system data. The SQL script required to
 
 ```sql
 CREATE DATABASE pomona_transit;
-````
+```
 
 2. Select the new database:
 
