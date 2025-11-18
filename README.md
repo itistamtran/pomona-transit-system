@@ -26,6 +26,7 @@ It uses **JavaFX** for the user interface, **MySQL** as the backend database, an
 
 ## Project Structure
 
+````txt
 pomona-transit-system/
 │
 ├── bin/ # Compiled Java class files (not committed)
@@ -54,6 +55,7 @@ pomona-transit-system/
 ├── .classpath # VS Code / Eclipse classpath config
 └── .project # VS Code / Eclipse project config
 
+
 ## Database Setup
 
 This project uses MySQL to store transit system data. The SQL script required to create the database and all necessary tables is included in the project.
@@ -62,7 +64,7 @@ This project uses MySQL to store transit system data. The SQL script required to
 
 ```sql
 CREATE DATABASE pomona_transit;
-```
+````
 
 2. Select the new database:
 
