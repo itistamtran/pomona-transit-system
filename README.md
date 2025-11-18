@@ -26,8 +26,6 @@ It uses **JavaFX** for the user interface, **MySQL** as the backend database, an
 
 ## Project Structure
 
-## Project Structure
-
 ```text
 pomona-transit-system/
 │
