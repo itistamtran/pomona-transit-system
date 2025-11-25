@@ -15,9 +15,10 @@ public class HomePage {
     public HomePage(Stage stage) {
 
         Text title = new Text("Pomona Transit System Management");
-        title.setFont(Font.font("Arial", 28));
+        title.setFont(Font.font("Arial", 30));
+        title.setStyle("-fx-font-weight: bold;");
 
-        Text subtitle = new Text("Please select one of the following options to view or make changes on our database");
+        Text subtitle = new Text("Please select one of the following options:");
         subtitle.setFont(Font.font("Arial", 16));
 
         Button displayTrip = new Button("Display trip schedule");
@@ -39,7 +40,14 @@ public class HomePage {
             b.setPrefWidth(280);
         }
 
-        deleteBus.setStyle("-fx-background-color: #d9534f; -fx-text-fill: white;");
+        displayTrip.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        editTrip.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        displayStops.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        displayWeekly.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        addDriver.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        addBus.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        addActualStopInfo.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
+        deleteBus.setStyle("-fx-background-color: #1e4d2b; -fx-text-fill: white;");
 
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
