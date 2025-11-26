@@ -2,7 +2,6 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.io.FileInputStream;
 import java.util.Properties;
 
 public class Database {
@@ -14,7 +13,7 @@ public class Database {
     static {
         try {
             Properties props = new Properties();
-            props.load(new FileInputStream("config.properties"));
+            props.load(Database.class.getResourceAsStream("/config.properties"));
 
             URL = props.getProperty("db.url");
             USER = props.getProperty("db.user");
@@ -25,6 +24,7 @@ public class Database {
             e.printStackTrace();
         }
     }
+
 
     public static Connection connect() {
         try {
