@@ -50,9 +50,12 @@ CREATE TABLE TripOffering (
     DriverName VARCHAR(50),
     BusID INT,
     PRIMARY KEY (TripNumber, Date, ScheduledStartTime),
-    FOREIGN KEY (TripNumber) REFERENCES Trip(TripNumber),
-    FOREIGN KEY (DriverName) REFERENCES Driver(DriverName),
+    FOREIGN KEY (TripNumber) REFERENCES Trip(TripNumber)
+        ON DELETE CASCADE,
+    FOREIGN KEY (DriverName) REFERENCES Driver(DriverName)
+        ON DELETE SET NULL,
     FOREIGN KEY (BusID) REFERENCES Bus(BusID)
+        ON DELETE SET NULL
 );
 
 -- ============================================================
@@ -64,8 +67,10 @@ CREATE TABLE TripStopInfo (
     SequenceNumber INT,
     DrivingTime INT,
     PRIMARY KEY (TripNumber, StopNumber),
-    FOREIGN KEY (TripNumber) REFERENCES Trip(TripNumber),
+    FOREIGN KEY (TripNumber) REFERENCES Trip(TripNumber)
+        ON DELETE CASCADE,
     FOREIGN KEY (StopNumber) REFERENCES Stop(StopNumber)
+        ON DELETE CASCADE
 );
 
 -- ============================================================
@@ -82,8 +87,10 @@ CREATE TABLE ActualTripStopInfo (
     NumberOfPassengerIn INT,
     NumberOfPassengerOut INT,
     PRIMARY KEY (TripNumber, Date, ScheduledStartTime, StopNumber),
-    FOREIGN KEY (TripNumber) REFERENCES Trip(TripNumber),
+    FOREIGN KEY (TripNumber) REFERENCES Trip(TripNumber)
+        ON DELETE CASCADE,
     FOREIGN KEY (StopNumber) REFERENCES Stop(StopNumber)
+        ON DELETE CASCADE
 );
 
 -- ============================================================
